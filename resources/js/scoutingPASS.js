@@ -130,11 +130,13 @@ function addTimer(table, idx, name, data) {
   inp.setAttribute("type", "hidden");
   inp.setAttribute("id", "status_" + data.code);
   inp.setAttribute("value", "stopped");
+ 
   cell.appendChild(inp);
   inp = document.createElement('input');
   inp.setAttribute("hidden", "");
   inp.setAttribute("id", "intervalId_" + data.code);
   inp.setAttribute("value", "");
+  inp.setAttribute("size", 10);
   cell.appendChild(inp);
 
   if (data.hasOwnProperty('defaultValue')) {
@@ -182,7 +184,7 @@ function addCounter(table, idx, name, data) {
   inp.setAttribute("style", "background-color: black; color: white;border: none; text-align: center;");
   inp.setAttribute("disabled", "");
   inp.setAttribute("value", 0);
-  inp.setAttribute("size", 2);
+  inp.setAttribute("size", 7);
   inp.setAttribute("maxLength", 2);
   cell2.appendChild(inp);
 

@@ -76,6 +76,14 @@ var config_data = `
     { "name": "Speaker Scores",
       "code": "ass",
       "type": "counter"
+    },
+    { "name": "Attempted Amp Scores",
+      "code": "aaa",
+      "type": "counter"
+    },
+    { "name": "Attempted Speaker Scores",
+      "code": "aass",
+      "type": "counter"
     }
   ],
   "teleop": [
@@ -87,8 +95,12 @@ var config_data = `
       "code": "tss",
       "type": "counter"
     },
-    { "name": "Times Amplified",
-      "code": "tta",
+    { "name": "Attempted Amp Scores",
+      "code": "taa",
+      "type": "counter"
+    },
+    { "name": "Attempted Speaker Scores",
+      "code": "tass",
       "type": "counter"
     },
     { "name": "Pickup From",
@@ -127,13 +139,14 @@ var config_data = `
     }
   ],
   "postmatch": [
-    { "name": "Driver Skill",
+    { "name": "Driver Skill (1 - 4)",
       "code": "ds",
       "type": "radio",
       "choices": {
-        "n": "Not Effective<br>",
-        "a": "Average<br>",
-        "v": "Very Effective<br>",
+        "1" : "1 (Useless)<br>",
+        "2": "2<br>",
+        "3": "3<br>",
+        "4": "4 (Magnificent)<br>",
         "x": "Not Observed"
       },
       "defaultValue": "x"
@@ -168,15 +181,6 @@ var config_data = `
     },
     { "name": "Tippy<br>(almost tipped over)",
       "code": "tip",
-      "type": "bool"
-    },
-    { "name": "Dropped Notes (>2)",
-      "code": "dn",
-      "type": "bool"
-    },
-    { "name": "Make good<br>alliance partner?",
-      "tooltip": "Would you want this robot on your alliance in eliminations?",
-      "code": "all",
       "type": "bool"
     },
     { "name": "Comments",
